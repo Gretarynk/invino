@@ -1,74 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-  rel="stylesheet"
-/>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <title>Main</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div id="header" class="header-wrapper">
-            <div class="logo" >
-                <img class="invino" src="/invinoreds.png" alt="logo invino">
-            </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="/menu.html">MENU</a></li>
-                    <li><a href="#">GALLERY</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
-            </nav>
-            <button id="burgerMenuButton" class="burgerMenu">
-                <img class="burger" src="/public/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 (1).svg" alt="">
-            </button>
-       <div class="socialWrapper">
-            <a class="socialSign" href="http://www.facebook.com/INVINObaras" target="_blank" ><img src="/public/287739_facebook_icon.svg" alt="facebook"></a>
-            <a class="socialSign" href="https://www.instagram.com/invinobaras?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" ><img src="/public/instagram.svg" alt="facebook"></a>
+      <div id="header" class="header-wrapper">
+        <div class="logo">
+          <img class="invino" src="/invinoreds.png" alt="logo invino" />
         </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="/menu.html">MENU</a></li>
+            <li><a href="#">GALLERY</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </nav>
+        <button id="burgerMenuButton" class="burgerMenu">
+          <img
+            class="burger"
+            src="/public/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 (1).svg"
+            alt=""
+          />
+        </button>
+        <div class="socialWrapper">
+          <a
+            class="socialSign"
+            href="http://www.facebook.com/INVINObaras"
+            target="_blank"
+            ><img src="/public/287739_facebook_icon.svg" alt="facebook"
+          /></a>
+          <a
+            class="socialSign"
+            href="https://www.instagram.com/invinobaras?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            ><img src="/public/instagram.svg" alt="facebook"
+          /></a>
         </div>
+      </div>
     </header>
     <div class="menuMobile">
-        <ul class="mobile-nav">
-            <li><a class="mobileNavLink" href="/menu.html">MENU</a></li>
-            <li><a class="mobileNavLink" href="#">GALLERY</a></li>
-            <li><a class="mobileNavLink" href="#">CONTACT</a></li>
-        </ul>
+      <ul class="mobile-nav">
+        <li><a class="mobileNavLink" href="/menu.html">MENU</a></li>
+        <li><a class="mobileNavLink" href="#">GALLERY</a></li>
+        <li><a class="mobileNavLink" href="#">CONTACT</a></li>
+      </ul>
     </div>
     <section class="container">
-        <div class="slider-wrapper">
-            <div class="blackBox"> <div class="textWrapper"><h4 class="infoText">Aušros Vartų g. 7, Vilnius</h4>
+      <div class="slider-wrapper">
+        <div class="blackBox">
+          <div class="textWrapper">
+            <h4 class="infoText">Aušros Vartų g. 7, Vilnius</h4>
             <h4 class="infoText">Tel. +370 60 809 445</h4>
-            <h5 class="infoText">Darbo laikas/Open: <br> VII - IV 16:00 - 02:00 <br> V-VI 16:00 - 04:00</h5>
-            <a id="mapLink" class="infoText"
-    href="https://maps.app.goo.gl/GHwgyTrYGSzV3oqZ8"
-    target="_blank"
-    class="mapLink"
-  >
-    <i class="fas fa-map-marker-alt"></i>
-    Mus rasyte čia / Our Location
-  </a>
+            <h5 class="infoText">
+              Darbo laikas/Open: <br />
+              VII - IV 16:00 - 02:00 <br />
+              V-VI 16:00 - 04:00
+            </h5>
+            <a
+              id="mapLink"
+              class="infoText"
+              href="https://maps.app.goo.gl/GHwgyTrYGSzV3oqZ8"
+              target="_blank"
+              class="mapLink"
+            >
+              <i class="fas fa-map-marker-alt"></i>
+              Mus rasyte čia / Our Location
+            </a>
+          </div>
         </div>
-        </div>
-          <img src="/public/DSC01518.jpg" alt="bar photo" id="slider1" class="slide active">  
-          <img src="/public/DSC01689-Enhanced-NR.jpg" alt="bar photo" id="slider2" class="slide">  
-          <img src="/public/DSC01666-Enhanced-NR.jpg" alt="bar photo" id="slider3" class="slide">  
-          <img src="/public/DSC01611-Enhanced-NR.jpg" alt="bar photo" id="slider4" class="slide">  
-          <img src="/public/DSC01779.jpg" alt="bar photo" id="slider5" class="slide">  
-          <img src="/public/DSC02028.jpg" alt="bar photo" id="slider6" class="slide">  
-
-        </div>
+        <img
+          src="/DSC01518.jpg"
+          alt="bar photo"
+          id="slider1"
+          class="slide active"
+        />
+        <img
+          src="/DSC01689-Enhanced-NR.jpg"
+          alt="bar photo"
+          id="slider2"
+          class="slide"
+        />
+        <img
+          src="/DSC01666-Enhanced-NR.jpg"
+          alt="bar photo"
+          id="slider3"
+          class="slide"
+        />
+        <img
+          src="/DSC01611-Enhanced-NR.jpg"
+          alt="bar photo"
+          id="slider4"
+          class="slide"
+        />
+        <img src="/DSC01779.jpg" alt="bar photo" id="slider5" class="slide" />
+        <img src="/DSC02028.jpg" alt="bar photo" id="slider6" class="slide" />
+      </div>
     </section>
-    <footer> <div class="footerWrapper"> © Made by Invino</div></footer>
+    <footer><div class="footerWrapper">© Made by Invino</div></footer>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
