@@ -1,0 +1,128 @@
+:root {
+  --primary-color: #ab0534;
+  --secondary-color: #010101;
+  --text-color: #ffffff;
+
+  --font-family-base: "Inter", sans-serif;
+}
+
+body {
+  margin: auto;
+  background-color: var(--primary-color);
+  font-family: var(--font-family-base);
+  color: var(--text-color) !important;
+}
+footer {
+  background-color: var(--secondary-color);
+  height: 50px;
+  font-family: var(--font-family-base);
+}
+.header-wrapper {
+  background-color: black;
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding-right: 7rem;
+}
+
+.socialWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+  width: 80px;
+  position: absolute;
+  top: 0%;
+  left: 18%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  z-index: 2;
+}
+.invino {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+}
+a {
+  text-decoration: none !important;
+  color: var(--text-color);
+  font-weight: 200;
+  padding: 1rem;
+}
+.burgerMenu {
+  display: none;
+  width: 40px;
+  height: 40px;
+ padding-right: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.burger{
+  object-fit: fill;
+}
+
+.menuMobile {
+  display: none;
+  position: absolute;
+  width: 60%;
+  right: -100%;
+  transition: 0.4s ease-in;
+}
+
+.menuMobile.active {
+  right: 0;
+  top: 70px;
+  z-index: 1;
+}
+
+.footerWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-weight: lighter;
+  font-size: x-small;
+  gap: 10px;
+}
+@media screen and (max-width: 769px) {
+  .header-wrapper {
+    padding-right: 1rem;
+  }
+  .menu {
+    display: none;
+  }
+  .menuMobile {
+    display: flex;
+    background-color: var(--secondary-color);
+    justify-content: center;
+    width: 100%;
+  }
+  .mobile-nav {
+    display: flex;
+    align-items: start;
+    a {
+      padding: 0.5rem;
+      font-size: 12px;
+    }
+  }
+  .burgerMenu {
+    display: flex;
+  }
+  .burger {
+    width: 40px;
+    height: 40px;
+  }
+  .logo {
+    left: 5%;
+  }
+
+  .textWrapper {
+    padding: 30px;
+  }
+}

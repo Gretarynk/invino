@@ -1,0 +1,14 @@
+@import "global.css";
+.menuContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.menuWrapper{
+    margin: 0;
+    width: 400px;
+}
+.invinoMenu{
+    width: 100%;
+    object-fit: fill;
+}
