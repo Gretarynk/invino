@@ -1,7 +1,6 @@
 const slides = document.querySelectorAll('.slide');
 const sliderWrapper = document.querySelector('.slider-wrapper');
-const burgerMenu=document.getElementById('burgerMenuButton');
-const mobileMenu= document.querySelector('.menuMobile')
+
 let currentIndex = 0;
 let direction=1;
 
@@ -28,8 +27,4 @@ const showNextSlide = () => {
 let intervalId = setInterval(showNextSlide, 6000);
 
 
-burgerMenu.addEventListener('click',()=>{
-    mobileMenu.classList.toggle('active')
-console.log('clicked')
-});
 

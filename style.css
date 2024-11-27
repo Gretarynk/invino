@@ -19,7 +19,8 @@
   left: 20%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-top: 4rem;
+    justify-content: space-between;
 }
 .textWrapper {
   padding: 50px;
@@ -56,14 +57,16 @@
   opacity: 1; /* Make the active slide visible */
   z-index: -1; /* Ensure the active slide is on top */
 }
-
+.fas {
+  color: rgb(241, 3, 3);
+}
 @media screen and (max-width: 769px) {
   
   .blackBox {
     width: 70%;
     left: 10%;
  z-index: 0;
-    padding-top: 6rem;
+    padding-top: 4rem;
     justify-content: space-between;
   }
   .textWrapper {

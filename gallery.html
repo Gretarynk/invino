@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Gallery</title>
+  </head>
+  <body>
+    <header>
+      <div id="header" class="header-wrapper">
+        <div class="logo">
+          <a class="logo" href="/index.html"
+            ><img
+              class="invino"
+              src="./public/invinoreds.png"
+              alt="logo invino"
+          /></a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="/menu.html">MENU</a></li>
+            <li><a href="/index.html">GALLERY</a></li>
+            <li><a href="/contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+        <button id="burgerMenuButton" class="burgerMenu">
+          <img
+            class="burger"
+            src="/public/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24 (1).svg"
+            alt=""
+          />
+        </button>
+        <button id="closeBurger" class="closeMenu hidden">
+          <p>X</p>
+        </button>
+        <div class="socialWrapper">
+          <a
+            class="socialSign"
+            href="http://www.facebook.com/INVINObaras"
+            target="_blank"
+            ><img src="/public/287739_facebook_icon.svg" alt="facebook"
+          /></a>
+          <a
+            class="socialSign"
+            href="https://www.instagram.com/invinobaras?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            ><img src="/public/instagram.svg" alt="facebook"
+          /></a>
+        </div>
+      </div>
+    </header>
+    <div class="menuMobile">
+      <ul class="mobile-nav">
+        <li><a class="mobileNavLink" href="/menu.html">MENU</a></li>
+        <li><a class="mobileNavLink" href="/gallery.html">GALLERY</a></li>
+        <li><a class="mobileNavLink" href="/contact.html">CONTACT</a></li>
+      </ul>
+      <div class="socialWrapper1">
+        <a
+          class="socialSignMobile"
+          href="http://www.facebook.com/INVINObaras"
+          target="_blank"
+          ><img src="/public/287739_facebook_icon.svg" alt="facebook"
+        /></a>
+        <a
+          class="socialSignMobile"
+          href="https://www.instagram.com/invinobaras?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          target="_blank"
+          ><img src="/public/instagram.svg" alt="facebook"
+        /></a>
+      </div>
+    </div>
+    <section class="galleryContainer">
+      <div class="galleryWrapper">
+        <h2 class="titleGallery">Gallery</h2>
+        <div class="gallery">
+          <img src="/public/DSC01518.jpg" alt="Image 1" class="gallery-item" />
+          <img src="/public/DSC01611-Enhanced-NR.jpg" alt="Image 2" class="gallery-item" />
+          <img src="/public/DSC01819.jpg" alt="Image 3" class="gallery-item" />
+          <img src="/public/DSC01926.jpg" alt="Image 4" class="gallery-item" />
+          <img src="/public/DSC02028.jpg" alt="Image 5" class="gallery-item" />
+        </div>
+      
+        <div class="modal" id="modal">
+          <span class="close" id="closeModal">&times;</span>
+          <img class="modal-content" id="modalImage" src="" alt="Large View">
+          <button class="nav-btn" id="prevBtn">&lt;</button>
+          <button class="nav-btn" id="nextBtn">&gt;</button>
+        </div>
+      
+      </div>
+    </section>
+    <footer><div class="footerWrapper">© Made by Invino</div></footer>
+    <script src="menuMobile.js"></script><script src="gallery.js"></script>
+  </body>
+</html>
