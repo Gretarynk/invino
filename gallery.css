@@ -7,6 +7,8 @@
 .titleGallery{
     text-align: center;
     font-weight: 300;
+    padding-bottom: 1rem;
+
 }
 .galleryContainer {
     margin: auto;
@@ -69,11 +71,12 @@
   
   .close {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 80px;
+    right: 20px;
     font-size: 30px;
     color: #fff;
     cursor: pointer;
+   
   }
   
   .nav-btn {
@@ -118,12 +121,20 @@
     }
     
     .gallery-item {
-        width: 350px; /* Fixed width */
-        height: 350px; /* Fixed height */
+        width: 340px; /* Fixed width */
+        height: 340px; /* Fixed height */
        
     }
     .galleryContainer {
        
      height: 100%;
 
-}}
+}
+.close {
+  position: absolute;
+  top: 90px;
+  right: 40px;
+ 
+}
+
+}
