@@ -49,15 +49,17 @@
 }
 
 #socialContacts {
-  padding-top: 2rem;
+  gap: 20px;
   display: flex;
   flex-direction: column;
   padding-left: 0px;
+  
 }
 .social img {
   width: 30px;
   height: 30px;
   display: inline-block;
+  
 }
 .mapWrapper {
   display: flex;

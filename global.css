@@ -28,7 +28,7 @@ body {
   display: flex; /* Enables flexbox on the body */
   flex-direction: column; /* Stacks elements vertically */
   min-height: 100vh;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   font-family: var(--font-family-base);
   color: var(--text-color) !important;
   overflow-x: hidden;
@@ -81,6 +81,7 @@ a {
   text-decoration: none !important;
   color: var(--text-color);
   font-weight: 200;
+  font-size: 20px;
   padding: 1rem;
 }
 .burgerMenu {
@@ -160,17 +161,18 @@ a.socialSignMobile {
     flex-direction: column;
     background-color: var(--secondary-color);
     align-items: center;
+    padding-top: 2rem;
   }
   .mobile-nav {
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 20px;
+    gap: 25px;
     padding-top: 1rem;
   }
   .burgerMenu {
     display: inline-block;
-    padding-right: 5rem;
+    padding-right: 4rem;
   }
   .burger {
     width: 40px;
