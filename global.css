@@ -5,14 +5,26 @@
 
   --font-family-base: "Inter", sans-serif;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 html {
     overflow-x: hidden;
+ 
   }
 body {
-  margin: auto;
+  margin: 0;
+  display: flex; /* Enables flexbox on the body */
+  flex-direction: column; /* Stacks elements vertically */
+  min-height: 100vh; /* Ensures the body takes up the full viewport height */
   background-color: var(--primary-color);
   font-family: var(--font-family-base);
   color: var(--text-color) !important;
+  overflow-x: hidden;
+ 
+ 
 }
 footer {
   background-color: var(--secondary-color);
@@ -20,6 +32,11 @@ footer {
   font-family: var(--font-family-base);
 }
 .header-wrapper {
+  /* position: fixed; Sticks to the top of the viewport
+  top: 0; /* Aligns the header to the top */
+  left: 0; /* Ensures it starts from the left edge */
+  width: 100%;
+  z-index: 3; 
   background-color: black;
   height: 70px;
   display: flex;
@@ -27,6 +44,7 @@ footer {
   align-items: center;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
   padding-right: 7rem;
+  
 }
 
 .socialWrapper {
@@ -36,7 +54,7 @@ footer {
 .logo {
   width: 80px;
   position: absolute;
-  top: 0%;
+  top: 0;
   left: 18%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -62,7 +80,7 @@ a {
   display: none;
   width: 40px;
   height: 40px;
-  padding-right: 20px;
+  padding-right: 30px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -77,17 +95,19 @@ a {
   transform: translateX(100%);
   width: 100px;
   height: 400px;
-  right: -100%;
-  transition: 0.4s ease-in;
+  right:0;
+  transition: transform 0.5s ease-in, opacity 0.4s ease-in;
   visibility: hidden;
+  opacity: 0;
  
 }
 
 .menuMobile.active {
 transform: translateX(0);
   right: 0;
-  top: 70px;
+  top: 60px;
   z-index: 1;
+  opacity: 1;
   visibility: visible;
 }
 
@@ -122,6 +142,8 @@ a.socialSignMobile{
 @media screen and (max-width: 769px) {
   .header-wrapper {
     padding-right: 1rem;
+   
+  
   }
   .socialSign {
     display: none;
@@ -130,7 +152,7 @@ a.socialSignMobile{
     display: none;
   }
   .menuMobile {
-    display: flex;
+    display:none;
     flex-direction: column;
     background-color: var(--secondary-color);
     align-items: flex-start;
@@ -146,6 +168,7 @@ a.socialSignMobile{
   }
   .burgerMenu {
     display:inline-block;
+    padding-right: 5rem;
   }
   .burger {
     width: 40px;
@@ -160,8 +183,14 @@ a.socialSignMobile{
   }
   .menuMobile.active {
     display: flex; /* Visible only when active */
-    transform: translateX(0); /* Slide in */
+    /* transform: translateX(0); Slide in */
     width: 200px;
+  }
+  .closeMenu{
+    all: unset;
+    color: #ffffff;
+    padding-right: 3rem;
+    cursor: pointer;
   }
 
 }

@@ -10,29 +10,31 @@
 }
 .galleryContainer {
     margin: auto;
- height: 100vh;
+ 
     padding: 20px; 
     display: flex;
     justify-content: center;
+    flex:1;
+    
 }
 
 .galleryWrapper {
-    flex-grow: 1;
-    width: auto; 
+    /* flex-grow: 1; */
+    width: 100%; 
     max-width: 90%; 
     
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, max-content));
-    gap: 10px; /* Fixed gap between items */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
     justify-content: center;
 }
 
 .gallery-item {
-    width: 150px; /* Fixed width */
-    height: 150px; /* Fixed height */
+    width: 150px; 
+    aspect-ratio: 1/1;
     object-fit: cover;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
@@ -46,9 +48,9 @@
 }
 
   
-  /* Modal */
+
   .modal {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
@@ -94,15 +96,11 @@
     right: 20px;
   }
   @media screen and (max-width: 769px){
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, max-content));
-        
-    }
+  
     
     .gallery-item {
-        width: 200px; /* Fixed width */
-        height: 200px; /* Fixed height */
+        width: 200px; 
+        height: 200px; 
        
     }
     .galleryContainer {
@@ -114,10 +112,9 @@
   }
 }
 @media screen and (max-width: 510px){
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, max-content));
-        
+   
+    .modal{
+      top: -20;
     }
     
     .gallery-item {

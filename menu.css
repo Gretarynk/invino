@@ -1,8 +1,10 @@
 @import "global.css";
 .menuContainer{
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    height: 100vh;
+    flex: 1;
 }
 .menuWrapper{
     margin: 0;
