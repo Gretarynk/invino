@@ -1,6 +1,5 @@
 @import "global.css";
 
-
 .container {
   height: auto;
   margin: auto;
@@ -11,9 +10,9 @@
 }
 
 .blackBox {
-  background-color: rgba(4, 4, 4, 0.421);
+  background-color: rgba(4, 4, 4, 0.5);
   width: 300px;
-  height:95vh;
+  height: 95vh;
   z-index: 1;
   position: absolute;
   top: 0;
@@ -21,23 +20,24 @@
   display: flex;
   flex-direction: column;
   padding-top: 7rem;
-    justify-content: space-between;
+  justify-content: space-between;
 }
 .textWrapper {
-  padding: 50px ;
+  padding: 50px;
   gap: 10px;
 }
 .infoText {
   font-family: var(--font-family-base);
-  font-weight: 200;
+  font-weight: 300;
+  font-size: 16px;
   padding: 10px;
 }
 #mapLink {
   display: flex;
-  align-items:baseline;
-gap: 10px;
+  align-items: baseline;
+  gap: 10px;
   padding-left: 10px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .slider-wrapper {
@@ -45,7 +45,6 @@ gap: 10px;
   /* position: relative; */
   width: calc(100% * 6);
   height: 100%;
-  
 }
 
 .slide {
@@ -61,24 +60,22 @@ gap: 10px;
 }
 
 .slide.active {
-  opacity: 1; 
-  z-index: -1; 
+  opacity: 1;
+  z-index: -1;
 }
 .fas {
   color: rgb(241, 3, 3);
 }
 @media screen and (max-width: 769px) {
-  
   .blackBox {
     width: 70%;
     height: 95vh;
     left: 10%;
- z-index: 0;
-    padding-top: 6rem;
+    z-index: 0;
+    padding-top: 7rem;
     justify-content: space-between;
   }
   .textWrapper {
     padding: 30px;
   }
 }
-

@@ -12,7 +12,7 @@
 }
 .galleryContainer {
     margin: auto;
- 
+    background-color: var(--primary-color);
     padding: 20px; 
     display: flex;
     justify-content: center;
@@ -32,6 +32,8 @@
     flex-wrap: wrap;
     gap: 20px; 
     justify-content: center;
+   
+    
 }
 
 .gallery-item {
@@ -102,8 +104,8 @@
   
     
     .gallery-item {
-        width: 200px; 
-        height: 200px; 
+        width: 300px; 
+        height: 300px; 
        
     }
     .galleryContainer {
@@ -121,8 +123,8 @@
     }
     
     .gallery-item {
-        width: 340px; /* Fixed width */
-        height: 340px; /* Fixed height */
+        width: 250px; 
+        height: 250px; 
        
     }
     .galleryContainer {
