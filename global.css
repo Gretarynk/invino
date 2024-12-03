@@ -81,7 +81,7 @@ a {
   text-decoration: none !important;
   color: var(--text-color);
   font-weight: 200;
-  font-size: 20px;
+  font-size: 16px;
   padding: 1rem;
 }
 .burgerMenu {
@@ -121,7 +121,7 @@ a {
 .socialWrapper1 {
   display: flex;
   padding-top: 2rem;
-  
+
 }
 a.socialSignMobile {
   padding-left: 1rem;
