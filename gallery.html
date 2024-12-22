@@ -85,35 +85,14 @@
     <section class="galleryContainer">
       <div class="galleryWrapper">
         <h2 class="titleGallery">Gallery</h2>
-        <div class="gallery">
-          <img src="/public/food1.jpg" alt="Image 1" class="gallery-item" />
-          <img src="/public/food2.jpg" alt="Image 2" class="gallery-item" />
-          <img src="/public/food3.jpg" alt="Image 3" class="gallery-item" />
-          <img src="/public/food4.jpg" alt="Image 4" class="gallery-item" />
-          <img src="/public/food5.jpg" alt="Image 5" class="gallery-item" />
-          <img src="/public/food6.jpg" alt="Image 6" class="gallery-item" />
-          <img src="/public/invino2.jpg" alt="Image 7" class="gallery-item" />
-          <img src="/public/invino3.jpg" alt="Image 8" class="gallery-item" />
-          <img src="/public/invino4.jpg" alt="Image 9" class="gallery-item" />
-          <img src="/public/invino5.jpg" alt="Image 10" class="gallery-item" />
-          <img src="/public/invino6.jpg" alt="Image 11" class="gallery-item" />
-          <img src="/public/invino7.jpg" alt="Image 12" class="gallery-item" />
-          <img src="/public/ojo1.jpg" alt="Image 13" class="gallery-item" />
-          <img src="/public/ojo2.jpg" alt="Image 14" class="gallery-item" />
-          <img src="/public/ojo3.jpg" alt="Image 15" class="gallery-item" />
-          <img src="/public/ojo4.jpg" alt="Image 16" class="gallery-item" />
-          <img src="/public/ojo5.jpg" alt="Image 17" class="gallery-item" />
-          <img src="/public/ojo6.jpg" alt="Image 18" class="gallery-item" />
-          <img src="/public/red2.jpg" alt="Image 19" class="gallery-item" />
-          <img src="/public/red3.jpg" alt="Image 20" class="gallery-item" />
-          <img src="/public/red4.jpg" alt="Image 21" class="gallery-item" />
-          <img src="/public/red6.jpg" alt="Image 22" class="gallery-item" />
-          
+        <div class="gallery" id="gallery">
+
         </div>
       
         <div class="modal" id="modal">
           <span class="close" id="closeModal">&times;</span>
           <img class="modal-content" id="modalImage" src="" alt="Large View">
+          <h2 class="photoTitle" id="photoTitle"></h2>
           <button class="nav-btn" id="prevBtn">&lt;</button>
           <button class="nav-btn" id="nextBtn">&gt;</button>
         </div>
@@ -121,6 +100,9 @@
       </div>
     </section>
     <footer><div class="footerWrapper">© Made by Invino</div></footer>
-    <script src="menuMobile.js"></script><script src="gallery.js"></script>
+    <script src="menuMobile.js"></script>
+    <script src="data/photo.js"></script>
+    <script src="gallery.js"></script>
+    
   </body>
 </html>

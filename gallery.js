@@ -1,42 +1,79 @@
-// JavaScript for Image Gallery Modal
-const galleryItems = document.querySelectorAll(".gallery-item");
+const gallery = document.getElementById("gallery");
 const modal = document.getElementById("modal");
 const modalImage = document.getElementById("modalImage");
+const photoTitle = document.getElementById("photoTitle");
 const closeModal = document.getElementById("closeModal");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
 let currentIndex = 0;
 
-// Open modal and show clicked image
-galleryItems.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    modal.style.display = "flex";
-    modalImage.src = item.src;
-    currentIndex = index;
-  });
-});
+// Render gallery items dynamically
+gallery.innerHTML = window.photos
+  .map(
+    (photo, index) => `
+    <img
+      src="${photo.src}"
+      alt="${photo.title}"
+      class="gallery-item"
+      data-index="${index}"
+    />
+  `
+  )
+  .join("");
+
+// Open modal and set the content
+function openModal(index) {
+  currentIndex = index;
+  modal.classList.add("active");
+  updateModalContent();
+}
+
+// Update modal content
+function updateModalContent() {
+  const { src, title } = window.photos[currentIndex];
+  modalImage.src = src;
+  photoTitle.textContent = title;
+}
 
 // Close modal
-closeModal.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+function closeModalHandler() {
+  modal.classList.remove("active");
+}
 
-// Navigate to previous image
-prevBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
-  modalImage.src = galleryItems[currentIndex].src;
-});
-
-// Navigate to next image
-nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % galleryItems.length;
-  modalImage.src = galleryItems[currentIndex].src;
-});
-
-// Close modal when clicking outside the image
+// Close modal when clicking outside the content
 modal.addEventListener("click", (event) => {
   if (event.target === modal) {
-    modal.style.display = "none";
+    closeModalHandler();
   }
 });
+
+// Navigate to the previous photo
+prevBtn.addEventListener("click", (event) => {
+  event.stopPropagation(); // Prevent event bubbling
+  currentIndex = (currentIndex - 1 + window.photos.length) % window.photos.length;
+  updateModalContent();
+});
+
+// Navigate to the next photo
+nextBtn.addEventListener("click", (event) => {
+  event.stopPropagation(); // Prevent event bubbling
+  currentIndex = (currentIndex + 1) % window.photos.length;
+  updateModalContent();
+});
+
+// Navigate to the next photo by clicking on the large photo
+modalImage.addEventListener("click", (event) => {
+  event.stopPropagation(); // Prevent closing the modal
+  currentIndex = (currentIndex + 1) % window.photos.length;
+  updateModalContent();
+});
+
+// Handle gallery click
+gallery.addEventListener("click", (event) => {
+  if (event.target.classList.contains("gallery-item")) {
+    openModal(Number(event.target.dataset.index));
+  }
+});
+
+closeModal.addEventListener("click", closeModalHandler);
