@@ -8,6 +8,13 @@ const toggleMenu = () => {
   burgerMenu.classList.toggle('hidden'); 
   closeButton.classList.toggle('hidden'); 
 };
+const closeMenuOnScroll = () => {
+  if (mobileMenu.classList.contains('active')) {
+    mobileMenu.classList.remove('active');
+    burgerMenu.classList.remove('hidden');
+    closeButton.classList.add('hidden');
+  }
+};
 
 
 burgerMenu.addEventListener('click', toggleMenu);
@@ -21,3 +28,4 @@ window.addEventListener('resize', () => {
     closeButton.classList.add('hidden');
   }
 });
+window.addEventListener('scroll', closeMenuOnScroll);

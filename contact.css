@@ -42,7 +42,8 @@
   margin: 0;
 }
 #mapLink {
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 300;
 }
 .fas {
   color: rgb(241, 3, 3);
@@ -66,7 +67,13 @@
   display: flex;
   align-items: baseline;
 }
-
+.fas.fa-envelope {
+  margin-right: 8px; /* Add spacing between the icon and the text */
+  color: #fcfcfc; /* Change icon color */
+}
+.email-link{
+  padding-left: 0;
+}
 @media screen and (max-width: 769px) {
   .contactBox {
     position: absolute;
@@ -82,5 +89,6 @@
   .textWrapper {
     width: 95%;
     padding-left: 0.8rem;
+    padding-right: 10px;
   }
 }
